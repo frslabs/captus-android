@@ -14,6 +14,7 @@ The Captus SDK is a set of screens to capture the front and back images of ID do
 - [Quick Start](#quick-start)
   - [Initiating the Captus scanner](#initiating-the-captus-scanner)
   - [Handling the result](#handling-the-result)
+- [Captus Result](#captus-result)
 - [Captus Error Codes](#captus-error-codes)
 - [Captus Parameters](#captus-parameters)
 - [Help](#help)
@@ -190,6 +191,14 @@ Your activity must implement `CaptusResultCallback` to receive the result.
 
     // ...
 ```
+## Captus Result
+
+You can use the following methods in the `CaptusResult` instance to parse the result:
+
+| Return Type | Method                 | Usage                                      |
+| ----------- | ---------------------- | ------------------------------------------ |
+| String[]    | *getImagePaths()*        | Array of JPEG File Path of captured images |
+| String[]    | *getImageReferenceIds()* | Array of reference ID corresponding to each image |
 
 ## Captus Error Codes
 
