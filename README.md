@@ -14,6 +14,7 @@ The Captus SDK is a set of screens to capture the front and back images of ID do
 - [Quick Start](#quick-start)
   - [Initiating the Captus scanner](#initiating-the-captus-scanner)
   - [Handling the result](#handling-the-result)
+- [Captus Error Codes](#captus-error-codes)
 - [Captus Parameters](#captus-parameters)
 - [Help](#help)
 
@@ -189,6 +190,17 @@ Your activity must implement `CaptusResultCallback` to receive the result.
 
     // ...
 ```
+
+## Captus Error Codes
+
+Following error codes will be returned on the `onCaptusFailure` method of the callback
+
+| CODE | DESCRIPTION                  |
+| ---- | ---------------------------- |
+| 803  | Camera permission denied    |
+| 804  | Capture was interrupted            |
+| 805  | Captus SDK License got expired             |
+| 806  | Captus SDK License was invalid             |
 
 ## Captus Parameters
 
