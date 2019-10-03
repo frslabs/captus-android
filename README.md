@@ -92,6 +92,8 @@ Captus requires the camera permission to work properly
 
     <!-- Required by Captus -->
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application>
       ...
