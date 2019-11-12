@@ -21,6 +21,8 @@ The Captus SDK is a set of screens to capture the front and back images of ID do
 
 ## Prerequisite
 
+***NOTE : Encryption of CAPTUS SDK Result is under development***
+
 You will need a valid license to use the Captus SDK, which can be obtained by contacting `support@frslabs.com` . 
 
 Once you have the license , follow the below instructions for a successful integration of Captus SDK onto your Android Application.
