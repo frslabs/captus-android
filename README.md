@@ -207,9 +207,9 @@ Following error codes will be returned on the `onCaptusFailure` method of the ca
 | CODE | DESCRIPTION                  |
 | ---- | ---------------------------- |
 | 803  | Camera permission denied    |
-| 804  | Capture was interrupted            |
-| 805  | Captus SDK License got expired             |
-| 806  | Captus SDK License was invalid             |
+| 804  | Capture interrupted            |
+| 805  | Captus SDK License has expired             |
+| 806  | Captus SDK License is invalid             |
 
 ## Captus Parameters
 
