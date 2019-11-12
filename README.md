@@ -116,16 +116,16 @@ public class MainActivity extends AppCompatActivity implements CaptusResultCallb
     // ...
 
     /* Enter the Captus license key here */
-    private String CAPTUS_LICENSE_KEY = "<ENTER_YOUR_LICENSE_KEY_HERE>";
+    private String CAPTUS_LICENSE_KEY = "ENTER_YOUR_LICENSE_KEY_HERE";
 
     /* (OPTIONAL)  Enter the Captus api credentials here */
-    private String CAPTUS_API_BASE_URL = "<ENTER_BASE_URL_HERE>"
-            , CAPTUS_API_REFERENCE_ID = "<ENTER_REF_ID_HERE>"
-            , CAPTUS_API_CRED1 = "<ENTER_API_CRED1_HERE>"
-            , CAPTUS_API_CRED2 = "<ENTER_API_CRED2_HERE>";
+    private String CAPTUS_API_BASE_URL = "ENTER_BASE_URL_HERE"
+            , CAPTUS_API_REFERENCE_ID = "ENTER_REF_ID_HERE"
+            , CAPTUS_API_CRED1 = "ENTER_API_CRED1_HERE"
+            , CAPTUS_API_CRED2 = "ENTER_API_CRED2_HERE";
     
     /* (OPTIONAL)  Enter the Captus encryption key here */
-    private String CAPTUS_ENCRYPTION_KEY = "<ENTER_ENCRYPTION_KEY_HERE>";
+    private String CAPTUS_ENCRYPTION_KEY = "ENTER_ENCRYPTION_KEY_HERE";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
