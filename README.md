@@ -1,5 +1,5 @@
 # CAPTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.0.0--beta19-blue)
+![version](https://img.shields.io/badge/version-v1.0.0--beta21-blue)
 
 The Captus SDK is a set of screens to capture the front and back images of ID documents. It also allows the user to manually verify that the documents are clean and clear. This SDK is useful for IDs that cannot be processed on the mobile and needs server-side processing. 
 
@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
-    implementation 'com.frslabs.android.sdk:captus:1.0.0-beta19' 
+    implementation 'com.frslabs.android.sdk:captus:1.0.0-beta21' 
 }
 ```
 
@@ -212,6 +212,9 @@ Following error codes will be returned on the `onCaptusFailure` method of the ca
 | 804  | Capture interrupted            |
 | 805  | Captus SDK License has expired             |
 | 806  | Captus SDK License is invalid             |
+| 901  | Network error           |
+| 902  | Image upload failed             |
+| 1001  | Error parsing result             |
 
 ## Captus Parameters
 
