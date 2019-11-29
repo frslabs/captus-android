@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements CaptusResultCallb
         CaptusConfig captusConfig = new CaptusConfig.Builder()
                 .setLicenseKey(CAPTUS_LICENSE_KEY)
                 .setDocumentSide(Utility.Side.TWO)
-                .setEncryptionKey(CAPTUS_ENCRYPTION_KEY) // Optional
+                //.setEncryptionKey(CAPTUS_ENCRYPTION_KEY) // Optional
                 .setApiCredentials(new CaptusApiCredentials(CAPTUS_API_BASE_URL
                         ,CAPTUS_API_REFERENCE_ID
                         ,CAPTUS_API_CRED1
