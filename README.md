@@ -1,5 +1,5 @@
 # CAPTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.0.0--beta26-blue)
+![version](https://img.shields.io/badge/version-v1.0.0--beta27-blue)
 
 The Captus SDK is a set of screens to capture the front and back images of ID documents. It also allows the user to manually verify that the documents are clean and clear. This SDK is useful for IDs that cannot be processed on the mobile and needs server-side processing. 
 
@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
-    implementation 'com.frslabs.android.sdk:captus:1.0.0-beta26' 
+    implementation 'com.frslabs.android.sdk:captus:1.0.0-beta27' 
 }
 ```
 
@@ -201,6 +201,7 @@ You can use the following methods in the `CaptusResult` instance to parse the re
 | ----------- | ---------------------- | ------------------------------------------ |
 | String[]    | *getImagePaths()*        | Array of JPEG File Path of captured images |
 | String[]    | *getImageReferenceIds()* | Array of reference ID corresponding to each image |
+| String    | *getAmlCheckStatus()* | Result of the AML Check. <br><br> Values are <br> **Utility.AML_CHECK_PASS** <br> **Utility.AML_CHECK_FAIL** |
 
 ## Captus Error Codes
 
