@@ -181,7 +181,12 @@ Your activity must implement `CaptusResultCallback` to receive the result.
             String[] imagePaths = captusResult.getImagePaths();
             String[] imageReferenceIds = captusResult.getImageReferenceIds();
             
-            /* Handle the Captus Sdk result here */
+            if(captusResult.getAmlCheckStatus().equals(Utility.AML_CHECK_PASS)){
+                //Handle logic on AML Check Pass
+            }else{
+                //Handle logic on AML Check Fail
+            }
+            
         }
     }
 
