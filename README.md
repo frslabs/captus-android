@@ -3,6 +3,8 @@
 
 The Captus SDK is a set of screens to capture the front and back images of ID documents. It also allows the user to manually verify that the documents are clean and clear. This SDK is useful for IDs that cannot be processed on the mobile and needs server-side processing. 
 
+**You can find the latest version and release history [Here](CHANGELOG.md)**
+
 # Table Of Content
 
 - [Prerequisite](#prerequisite)
