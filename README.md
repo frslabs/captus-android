@@ -1,5 +1,5 @@
 # CAPTUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v1.0.0--beta27-blue)
+![version](https://img.shields.io/badge/version-v1.0-4-blue)
 
 The Captus SDK is a set of screens to capture the front and back images of ID documents. It also allows the user to manually verify that the documents are clean and clear. This SDK is useful for IDs that cannot be processed on the mobile and needs server-side processing. 
 
@@ -81,7 +81,7 @@ dependencies {
     implementation 'com.android.support:design:<version above 23.4.0>'      
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
-    implementation 'com.frslabs.android.sdk:captus:1.0.0-beta27' 
+    implementation 'com.frslabs.android.sdk:captus:1.0.4' 
 }
 ```
 
@@ -148,7 +148,9 @@ public class MainActivity extends AppCompatActivity implements CaptusResultCallb
         //Initialize the Captus Sdk Config object with the appropriate configurations
         CaptusConfig captusConfig = new CaptusConfig.Builder()
                 .setLicenseKey(CAPTUS_LICENSE_KEY)
-                .setDocumentSide(Utility.Side.TWO)
+                .setDocumentSide(CaptusUtility.Side.TWO)
+                .setCropboxOrientation(CaptusUtility.CropboxOrientation.HORIZONTAL)
+                .setCaptusSDK(true)
                 //.setEncryptionKey(CAPTUS_ENCRYPTION_KEY) // Optional
                 .setApiCredentials(new CaptusApiCredentials(CAPTUS_API_BASE_URL
                         ,CAPTUS_API_REFERENCE_ID
@@ -229,19 +231,37 @@ Following error codes will be returned on the `onCaptusFailure` method of the ca
   Accepts the Captus SDK licence key as a `String`
 
   
-- `setDocumentSide(Utility.Side documentSide)`  ***(Optional)*** *(Defaults to **Utility.Side.TWO**)*
+- `setDocumentSide(Utility.Side documentSide)`  ***(Optional)*** *(Defaults to **CaptusUtility.Side.TWO**)*
   
   Sets the number of document sides to be captured
   
   | Value                   | Effect                                               |
   | ----------------------- | ---------------------------------------------------- |
-  | Utility.Side.ONE        | Scans only the Front (Primary) side of the document  |
-  | Utility.Side.TWO        | Scans both Front and back side of the document       |
+  | CaptusUtility.Side.ONE        | Scans only the Front (Primary) side of the document  |
+  | CaptusUtility.Side.TWO        | Scans both Front and back side of the document       |
 
 - `setEncryptionKey(String captusEncryptionKey)`   ***(Optional)***
   
   Sets the Captus SDK encrpytion key as a `String` . If set, the output images will be encrypted.
   Obtain the appropriate encryption key through a REST API call , for details about the REST API, contact  `support@frslabs.com`
+  
+- `setCropboxOrientation(CaptusUtility.CropboxOrientation cropboxOrientation)` ***(Optional)*** *(Defaults to **CaptusUtility.CropboxOrientation.HORIZONTAL**)*
+
+  Sets the Captus SDK image capture orientation
+
+  | Value                   | Effect                                               |
+  | ----------------------- | ---------------------------------------------------- |
+  | CaptusUtility.CropboxOrientation.HORIZONTAL        | Captures the image with a landscape crop  |
+  | CaptusUtility.CropboxOrientation.VERTICAL        | Captures the image with a portrait crop       |
+
+- `setCaptusSDK(boolean value)` ***(Required)***
+
+  Sets the Captus SDK capture mode.
+  
+  | Value                   | Effect                                               |
+  | ----------------------- | ---------------------------------------------------- |
+  | true (Recommended)       | Captures the image(s) and returns the result |
+  | false       | Special case - Captures the image , OCR's the arabic text and returns the result along with the AML check status |
   
 - `setApiCredentials(CaptusApiCredentials captusApiCredentials)`   ***(Optional)***
   
