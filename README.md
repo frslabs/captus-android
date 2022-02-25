@@ -222,6 +222,7 @@ Following error codes will be returned on the `onCaptusFailure` method of the ca
 | 804  | Capture interrupted            |
 | 805  | Captus SDK License has expired             |
 | 806  | Captus SDK License is invalid             |
+| 808  | Transaction failed / Unable to ping             |
 | 901  | Network error           |
 | 902  | Image upload failed             |
 | 1001  | Error parsing result             |
